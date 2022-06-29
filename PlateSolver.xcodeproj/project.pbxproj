@@ -14,6 +14,14 @@
 		0205C290286A357D004EDE7A /* PlateSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0205C28F286A357D004EDE7A /* PlateSolverTests.swift */; };
 		0205C29A286A357D004EDE7A /* PlateSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0205C299286A357D004EDE7A /* PlateSolverUITests.swift */; };
 		0205C29C286A357D004EDE7A /* PlateSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0205C29B286A357D004EDE7A /* PlateSolverUITestsLaunchTests.swift */; };
+		0205C2A9286A35B7004EDE7A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0205C2A8286A35B7004EDE7A /* APIService.swift */; };
+		0205C2AC286A42AC004EDE7A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0205C2AB286A42AC004EDE7A /* Coordinator.swift */; };
+		026D7F80286B45600043C8B3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F7F286B45600043C8B3 /* ResultView.swift */; };
+		026D7F82286B5D240043C8B3 /* CaptureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F81286B5D240043C8B3 /* CaptureButton.swift */; };
+		026D7F84286B5F0D0043C8B3 /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F83286B5F0D0043C8B3 /* PhotoButton.swift */; };
+		026D7F86286B5F750043C8B3 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F85286B5F750043C8B3 /* CaptureImageView.swift */; };
+		026D7F88286B5FA40043C8B3 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F87286B5FA40043C8B3 /* URLRequestExtension.swift */; };
+		026D7F8C286C95050043C8B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D7F8B286C95050043C8B3 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		0205C295286A357D004EDE7A /* PlateSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0205C299286A357D004EDE7A /* PlateSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateSolverUITests.swift; sourceTree = "<group>"; };
 		0205C29B286A357D004EDE7A /* PlateSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0205C2A8286A35B7004EDE7A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		0205C2AA286A3A07004EDE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0205C2AB286A42AC004EDE7A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		026D7F7F286B45600043C8B3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		026D7F81286B5D240043C8B3 /* CaptureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButton.swift; sourceTree = "<group>"; };
+		026D7F83286B5F0D0043C8B3 /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
+		026D7F85286B5F750043C8B3 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
+		026D7F87286B5FA40043C8B3 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		026D7F8B286C95050043C8B3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +111,16 @@
 		0205C27D286A357A004EDE7A /* PlateSolver */ = {
 			isa = PBXGroup;
 			children = (
+				0205C2AA286A3A07004EDE7A /* Info.plist */,
+				026D7F89286B5FF20043C8B3 /* API */,
+				026D7F8A286C94F00043C8B3 /* Settings */,
 				0205C27E286A357A004EDE7A /* PlateSolverApp.swift */,
 				0205C280286A357A004EDE7A /* ContentView.swift */,
+				0205C2AB286A42AC004EDE7A /* Coordinator.swift */,
+				026D7F85286B5F750043C8B3 /* CaptureImageView.swift */,
+				026D7F7F286B45600043C8B3 /* ResultView.swift */,
+				026D7F81286B5D240043C8B3 /* CaptureButton.swift */,
+				026D7F83286B5F0D0043C8B3 /* PhotoButton.swift */,
 				0205C282286A357D004EDE7A /* Assets.xcassets */,
 				0205C284286A357D004EDE7A /* Preview Content */,
 			);
@@ -125,6 +150,23 @@
 				0205C29B286A357D004EDE7A /* PlateSolverUITestsLaunchTests.swift */,
 			);
 			path = PlateSolverUITests;
+			sourceTree = "<group>";
+		};
+		026D7F89286B5FF20043C8B3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0205C2A8286A35B7004EDE7A /* APIService.swift */,
+				026D7F87286B5FA40043C8B3 /* URLRequestExtension.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		026D7F8A286C94F00043C8B3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				026D7F8B286C95050043C8B3 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026D7F88286B5FA40043C8B3 /* URLRequestExtension.swift in Sources */,
+				0205C2AC286A42AC004EDE7A /* Coordinator.swift in Sources */,
 				0205C281286A357A004EDE7A /* ContentView.swift in Sources */,
+				026D7F80286B45600043C8B3 /* ResultView.swift in Sources */,
+				026D7F86286B5F750043C8B3 /* CaptureImageView.swift in Sources */,
+				026D7F8C286C95050043C8B3 /* SettingsView.swift in Sources */,
+				026D7F84286B5F0D0043C8B3 /* PhotoButton.swift in Sources */,
+				0205C2A9286A35B7004EDE7A /* APIService.swift in Sources */,
+				026D7F82286B5D240043C8B3 /* CaptureButton.swift in Sources */,
 				0205C27F286A357A004EDE7A /* PlateSolverApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,9 +470,12 @@
 				DEVELOPMENT_TEAM = Z67LVNYQSE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PlateSolver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses your camera for images to plate solve";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,7 +487,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,9 +502,12 @@
 				DEVELOPMENT_TEAM = Z67LVNYQSE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PlateSolver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses your camera for images to plate solve";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,7 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
