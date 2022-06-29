@@ -1,5 +1,5 @@
 # iOSPlateSolver
-iOS app that interacts with astrometry.net to do plate solving in the field.
+iOS app that interacts with astrometry.net to do [plate solving](https://nova.astrometry.net/) in the field.
 
 This is a very basic app. When installed add your [API key](https://nova.astrometry.net/api_help) by tapping the gear icon in the upper right.
 Then from the main view you can take a picture which will be uploaded to astrometry.net's service. The app will refresh the status every 10 seconds and
