@@ -22,6 +22,8 @@ struct SettingsView: View {
     }
     
     func saveApiKey() {
+        guard !apiKey.isEmpty else { return }
+        
         UserDefaults().set(apiKey,
                            forKey: APIService.Constants.apiKey)
         onSaveKey(apiKey)
