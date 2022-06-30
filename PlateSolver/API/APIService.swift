@@ -29,7 +29,7 @@ class APIService: ObservableObject {
         case unauthorized = "Invalid API Key"
     }
     
-    var subId: String?
+    var subId: Int?
     @Published var status: SubmissionStatus = .notStarted
     @Published var solvedUrl: String?
     @Published var errorState: ErrorState?
@@ -74,14 +74,10 @@ class APIService: ObservableObject {
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data) as! [String:AnyObject]
+                let json = try JSONDecoder().decode(AuthResponse.self, from: data)
                 print(json)
                 
-                if let sessionKey = json["session"] as? String {
-                    UserDefaults().set(sessionKey, forKey: Constants.sessionKey)
-                } else {
-                    self?.errorState = .unauthorized
-                }
+                UserDefaults().set(json.session, forKey: Constants.sessionKey)
             } catch {
                 print(error)
                 self?.errorState = .unauthorized
@@ -92,6 +88,7 @@ class APIService: ObservableObject {
     }
     
     func uploadImage(_ image: Data) {
+        timer?.invalidate()
         guard let sessionKey = UserDefaults().string(forKey: Constants.sessionKey) else {
             login()
             return
@@ -119,12 +116,12 @@ class APIService: ObservableObject {
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data) as! [String:AnyObject]
+                let json = try JSONDecoder().decode(SubmissionResponse.self, from: data)
                 print(json)
                 
                 DispatchQueue.main.async {
                     self.status = .processing
-                    self.subId = String(json["subid"] as? Int ?? 0)
+                    self.subId = json.subid
                     UserDefaults().set(self.subId, forKey: Constants.lastSubmission)
                     self.timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak self] _ in
                         self?.updateSubmissionStatus()
@@ -139,7 +136,7 @@ class APIService: ObservableObject {
     }
     
     func updateSubmissionStatus() {
-        guard let subId = subId, subId != "0" else {
+        guard let subId = subId, subId != 0 else {
             return
         }
         
@@ -154,10 +151,10 @@ class APIService: ObservableObject {
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data) as! [String:AnyObject]
+                let json = try JSONDecoder().decode(SubmissionStatusResponse.self, from: data)
                 print(json)
-                if let calibrations = json["job_calibrations"] as? [[Int]], calibrations.count > 0 {
-                    
+                let calibrations = json.jobCalibrations
+                if calibrations.count > 0 {
                     DispatchQueue.main.async {
                         self.timer?.invalidate()
                         self.status = .done
